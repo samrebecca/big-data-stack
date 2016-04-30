@@ -1,0 +1,15 @@
+---
+# tasks file for mahout
+- name: fetch mahout
+  get_url:
+    url: "{{ mahout_url }}"
+    dest: "{{ ansible_env.PWD }}/{{ mahout_archive_name }}"
+- name: extract mahout
+  unarchive: src="{{ ansible_env.PWD }}/{{ mahout_archive_name }}" dest="{{ ansible_env.PWD }}" owner={{ mahout_user}} group={{ mahout_user }} creates="{{ ansible_env.PWD }}/apache-mahout-distribution-{{ mahout_version }}" copy=no
+  become: yes
+- name: create symlink shortcut
+  file:
+    src: "{{ ansible_env.PWD }}/apache-mahout-distribution-{{ mahout_version }}"
+    dest: "{{ mahout_home }}"
+    state: link
+  become: yes

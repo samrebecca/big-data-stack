@@ -1,6 +1,3 @@
 ---
-
-- include: addons/analytics_dependencies.yml
-- include: addons/hbase.yml
-- include: addons/pig.yml
-- include: addons/spark.yml
+- include: addons/mahout.yml
+- include: addons/dataset.yml

@@ -1,0 +1,6 @@
+- name: install mahout
+  hosts: frontendnodes
+  become: yes
+  roles:
+    - role: java
+    - role: mahout    

@@ -1,0 +1,6 @@
+---
+# defaults file for dataset
+dataset_url: http://download.cms.gov/Research-Statistics-Data-and-Systems/Statistics-Trends-and-Reports/Medicare-Provider-Charge-Data/Downloads/Medicare_Provider_Util_Payment_PUF_CY2012_update.zip?agree=yes&next=Accept
+dataset_archive_name: medicare_dataset.zip
+dataset_home: /opt/dataset
+dataset_user: hadoop

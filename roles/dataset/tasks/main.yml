@@ -1,0 +1,13 @@
+---
+# tasks file for dataset
+- name: fetch dataset
+  get_url:
+    url: "{{ dataset_url }}"
+    dest: "/home/hadoop/{{ dataset_archive_name }}"
+- name: get unzip
+  apt: name=unzip state=present
+- name: extract dataset
+  unarchive: src="/home/hadoop/{{ dataset_archive_name }}" dest=/home/hadoop copy=no
+  become: yes
+- name: install matplotlib
+  apt: name=python-matplotlib state=present
