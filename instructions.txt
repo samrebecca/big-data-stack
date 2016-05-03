@@ -1,3 +1,10 @@
+Problem Statement:
+With the amount of healthcare fraud, the importance of identifying fraud and abuse in healthcare cannot be ignored; so healthcare providers must develop automated systems to identify fraud, waste and abuse to reduce its harmful impact on their business. The goal is to perform big data analytics on the Healthcare dataset provided for detecting irregularities and visualize the results.
+
+Work done:
+There are different ways to analyse fraud. We have chosen to check the number of services provided by a doctor in a particular period of time.
+We took the IDs of the doctors along with the service IDs that they provided and ran map reduce on it to find how many services each doctor has provided over a period of time. We saw that most doctors had provided lower than 15 services but some had done upwards of 400. Since those data points are essentially outliers, we know that these are potential fraud cases that have claimed medical insurance.
+
 1. Follow the instructions under usage of README.md in big-data-stack to set up the cluster
 2. Run play-alladdons.yml to install mahout and the dataset to the frontend node.
 3. Login to the frontend node and switch to hadoop user.
