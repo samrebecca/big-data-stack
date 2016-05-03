@@ -130,6 +130,13 @@ The `hadoop` user is present on all the nodes and is the hadoop administrator.
 If you need to change anything on HDFS, it must be done as `hadoop`.
 
 
+Steps to run our analysis:
+1. Follow the instructions under usage of README.md in big-data-stack to set up the cluster
+2. Run play-alladdons.yml to install mahout and the dataset to the frontend node.
+3. Login to the frontend node and switch to hadoop user.
+4. Copy the script.sh and the HealthCare.java to /home/hadoop/
+5. Run script.sh
+
 # Access
 
 `vcl ssh` can be used as shorthand to access the nodes.
@@ -188,3 +195,4 @@ Please see the `LICENSE` file in the root directory of the repository.
 <!-- - links to third party tutorials and demonstrations -->
 
 <!-- The name of the technology should link to the project webpage -->
+
